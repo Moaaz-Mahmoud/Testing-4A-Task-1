@@ -15,12 +15,6 @@ class Vernam:
     def decrypt(self, cipher):
         msg = ''
         key = self.key
-        for a, b in zip(ciph, key):
+        for a, b in zip(cipher, key):
             msg += chr(ord(a)^b)
         return msg
-
-
-vern = Vernam()
-ciph = vern.encrypt('meow')
-print(ciph)
-print(vern.decrypt(ciph))
